@@ -7,31 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
-    <div id="content_container">
-        <div id="form_container">
-            <div id="form_header_container">
-                <h2 id="form_header">  تسجيل الدخول وإنشاء الحساب</h2>
-            </div>
+    <div class="main">
+        <div class="background_img"></div>
+        <input type="checkbox" id="chk" aria-hidden="true" />
 
-            <div id="form_content_container">
-                <div id="form_content_inner_container">
-                    <input type="text" placeholder="الأسم الكامل" id="full_name">
-                    <input type="email" placeholder=" بريدك الإلكتروني " id="email">
-                    <input type="password" placeholder=" كلمة المرور " id="password">
+        <div class="singup">
+                <label for="chk" aria-hidden="true"> إنشاء حساب </label>
+                <input type="text" placeholder="الأسم الكامل" id="full_name"/>
+                <input type="email" placeholder=" بريدك الإلكتروني " id="email"/>
+                <input type="password" placeholder=" كلمة المرور " id="password"/>
 
-                    <input type="text" placeholder=" أغنيتك المفضلة " id="favourite_song">
-                    <input type="text" placeholder=" هل انت حزين؟ (نعم/ لا) " id="milk_before_cereal">
+                <input type="text" placeholder=" أغنيتك المفضلة " id="favourite_song"/>
+                <input type="text" placeholder=" هل تأكل الحليب قبل الحبوب؟ (نعم/ لا) " id="milk_before_cereal"/>
 
-                    <div id="btn_container">
-                        <button type="button" onclick="login()">تسجيل الدخول</button>
-                        <button type="button" onclick="register()">إنشاء حساب</button>
-                    </div>
-                </div>
-            </div>
+                <button type="button" onclick="register()">إنشاء حساب</button>
+        </div>
+
+        <div class="login">
+                <label for="chk" aria-hidden="true"> تسجيل الدخول </label>
+                <input type="email" placeholder=" بريدك الإلكتروني " id="email"/>
+                <input type="password" placeholder=" كلمة المرور " id="password"/>
+
+                <button type="button" onclick="login()">تسجيل الدخول</button>
+
         </div>
     </div>
 </body>
