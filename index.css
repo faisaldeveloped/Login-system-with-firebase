@@ -26,7 +26,7 @@ body
 
 .background_img
 {
-    background: url('../photo_01.jpg') no-repeat center / cover;
+    background: url('./photo_01.jpg') no-repeat center / cover;
     width: 350px;
     height: 500px;
     -webkit-filter: blur(5px);
