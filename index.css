@@ -1,127 +1,134 @@
-html, body
-{
-    width: 100%;
-    height: 100%;
-    background: -webkit-linear-gradient(25deg,  #0f0c29, #302b63, #24243e);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none;
-    outline: none;
 }
 
-#content_container
+body
 {
-    width: 30%;
-    height: 70%;
-}
-
-#form_container
-{
-    width: 100%;
-    height: 100%;
-    background-color: #24243e;
-    box-shadow: 0 0 50px -20px #000;
-    border-radius: 2%;
-    overflow: hidden;
-}
-
-#form_header_container
-{
-    width: 100%;
-    height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    float: right;
-    padding: 20px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    border-bottom: 1px solid transparent;
-    border-image: -webkit-linear-gradient(25deg, to right,  #0f0c29, #302b63, #24243e) 20;
-    background: #000;
-}
-
-#form_header
-{
-    display: inline-block;
-    font-size: 15px;
+    min-height: 100vh;
     font-family: "Tajawal", sans-serif;
-    font-weight: 900;
-    background: -webkit-linear-gradient(25deg, #0f0c29, #FB5607, #24243e, #8338EC, #3A86FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-#form_content_container
-{
-    width: 100%;
-    height: 90%;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
+    background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
 }
 
-#form_content_inner_container
+.main
 {
-    width: 75%;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 5px 20px 50px #0f0c29;
+}
+
+.background_img
+{
+    background: url('../photo_01.jpg') no-repeat center / cover;
+    width: 350px;
+    height: 500px;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    z-index: -9999;
+}
+
+#chk
+{
+    display: none;
+}
+
+.singup
+{
+    position: relative;
+    width: 100%;
     height: 100%;
-    float: right;
+}
+
+label
+{
+    color: #fff;
+    font-size: 1.8em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    z-index: 999;
 }
 
 input
 {
-    width: 100%;
-    height: 40px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    background: #000;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 500;
-    color: #fff;
-    font-size: 12px;
-    border-bottom: 2px solid transparent;
-    border-top-right-radius: 2%;
-    border-top-left-radius: 2%;
-    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
-}
-
-#btn_container
-{
-    width: 100%;
-    height: 10%;
-    background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
-    color: #fff;
-    float: right;
-    margin-top: 5px;
-}
-
-#btn_container button
-{
-    width: 50%;
-    height: 100%;
-    float: right;
-    background: transparent;
-    color: inherit;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 900;
-    font-size: 12px;
-    cursor: pointer;
+    width: 60%;
+    background: #e0dede;
+    justify-content: center;
     display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+button
+{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
     justify-content: center;
     align-items: center;
+    display: block;
+    color: #fff;
+    background: #FB5607;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transition: .2s ease-in;
+    cursor: pointer;
 }
 
-.swal2-popup
+button:hover
 {
-    font-family: "Tajawal", sans-serif;
+    background: #8338EC;
+}
+
+.login
+{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-140px);
+    transition: .8s ease-in-out !important;
+}
+
+.login label
+{
+    color: #573b8a;
+    transform: scale(.8) !important;
+}
+
+#chk:checked ~ .login
+{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label
+{
+    transform: scale(1);
+}
+
+#chk:checked ~ .singup label
+{
+    transform: scale(.8);
 }
